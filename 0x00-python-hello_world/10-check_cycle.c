@@ -14,7 +14,6 @@ int check_cycle(listint_t *list)
 	{
 		return (0);
 	}
-
 	while (pointer != NULL &&
 	       checker->next != NULL &&
 	       checker->next->next != NULL)
