@@ -7,7 +7,7 @@ if number > 0:
 else:
     rand = number % -10
 
-print('Last digit of {:d} id {:d}' .format(number,rand), end=" ")
+print('Last digit of {:d} is {:d}' .format(number,rand), end=" ")
 
 if rand == 0:
     print('and is 0')
