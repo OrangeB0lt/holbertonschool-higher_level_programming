@@ -8,7 +8,7 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *pointer = list, *checker = pointer->next;
+	listint_t *pointer = list, *checker = list->next;
 
 	if (list == NULL || list->next == NULL)
 	{
@@ -24,6 +24,10 @@ int check_cycle(listint_t *list)
 			return (1);
 		}
 		pointer = pointer->next;
+		if (pointer == NULL)
+		{
+			break;
+		}
 		checker = checker->next->next;
 	}
 	return (0);
