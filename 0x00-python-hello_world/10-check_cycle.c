@@ -26,7 +26,7 @@ int check_cycle(listint_t *list)
 		pointer = pointer->next;
 		if (pointer == NULL)
 		{
-			break;
+			return (1);
 		}
 		checker = checker->next->next;
 	}
