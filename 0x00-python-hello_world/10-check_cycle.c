@@ -4,7 +4,7 @@
  * check_cycle - checks if a linked list contains a cycle
  * @list: linked list comming in
  * Return: 1 if it cycles, 0 else
- **/
+ */
 
 int check_cycle(listint_t *list)
 {
