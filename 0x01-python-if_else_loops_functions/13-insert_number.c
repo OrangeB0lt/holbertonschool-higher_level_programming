@@ -7,7 +7,7 @@
  * Return: address of the added node otherwise it adds NULL
  **/
 
-listint_t *insert_node(istint_t **head, int number)
+listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *last, *nexxt, *curr;
 
