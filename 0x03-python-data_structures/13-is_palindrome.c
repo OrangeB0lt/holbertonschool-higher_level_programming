@@ -6,7 +6,7 @@
  * Return: returns 1 on success, 0 otherwise
  **/
 
-int is palindrom(listint_t **head)
+int is_palindrome(listint_t **head)
 {
 	listint_t *beginning;
 	int *storage, index = 0, length = 0;
@@ -15,7 +15,7 @@ int is palindrom(listint_t **head)
 
 	while (start != NULL)
 		start = start->next, length++;
-	storage = malloc (sizeof(int) * (len));
+	storage = malloc(sizeof(int) * (len));
 	if (storage == NULL)
 		return (0);
 	index = 0;
@@ -31,5 +31,5 @@ int is palindrom(listint_t **head)
 		length--;
 	}
 	free(storage);
-	return(0);
+	return (0);
 }
