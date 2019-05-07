@@ -13,13 +13,16 @@ int is_palindrome(listint_t **head)
 
 	beginning = *head;
 
-	while (start != NULL)
-		start = start->next, length++;
-	storage = malloc(sizeof(int) * (len));
+	while (beginning != NULL)
+	{
+		beginning = beginning->next;
+		length++;
+	}
+	storage = malloc(sizeof(int) * (length));
 	if (storage == NULL)
 		return (0);
 	index = 0;
-	start = *head;
+	beginning = *head;
 	while (storage[index] == storage[length])
 	{
 		if (index == length || index > length)
