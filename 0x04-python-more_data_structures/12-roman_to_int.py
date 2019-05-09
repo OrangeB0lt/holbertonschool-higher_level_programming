@@ -29,4 +29,5 @@ def roman_to_int(roman_string):
         else:
             arabNum += number1
             index += 1
+            
     return arabNum
