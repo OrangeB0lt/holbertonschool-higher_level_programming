@@ -24,4 +24,4 @@ class Square:
         """
         Returns area of the square instance
         """
-        return (slef.__size ** 2)
+        return (self.__size ** 2)
