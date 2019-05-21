@@ -8,7 +8,7 @@ class Square:
     Square class with priv instance att size
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Args:
           size: size of square
@@ -51,7 +51,7 @@ class Square:
         """
         prints to the stdout square with # or empty line if 0
         """
-        print("\n".join(["".join(["#" for a in range(slef.__size)])
+        print("\n".join(["".join(["#" for a in range(self.__size)])
                          for b in range(self.size)]))
 
     def area(self):
@@ -64,7 +64,7 @@ class Square:
         """
         check if it is a tuple and integer
         """
-        if type(position is not tuple or len(position) != 2:
+        if type(position) is not tuple or len(position) != 2:
             return False
         elif type(position[1]) is not int or position[1] < 0:
             return False
