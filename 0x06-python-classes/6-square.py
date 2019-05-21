@@ -19,6 +19,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+            self.position = position
 
     @property
     def size(self):
@@ -74,16 +75,20 @@ class Square:
         else:
             return True
 
-
-    def my_print(self):
-        """
-        prints to the stdout square with # or empty line if 0
-        """
-        print("\n".join(["".join(["#" for a in range(self.__size)])
-                         for b in range(self.size)]))
-
     def area(self):
         """
         Returns area of the square instance
         """
         return (self.__size ** 2)
+
+    def my_print(self):
+        """
+        prints to the stdout square with # or empty line if 0
+        """
+        if self.size == 0:
+            print()
+            return
+        for a in range(self.position[1]):
+            print()
+        for a in range(self.size):
+            print("{}{}" .format(" " * self.position[0], "#" * self.size))
