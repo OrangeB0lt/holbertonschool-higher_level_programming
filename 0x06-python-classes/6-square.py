@@ -66,9 +66,9 @@ class Square:
         """
         if type(position) is not tuple or len(position) != 2:
             return False
-        elif type(position[1]) is not int or position[1] < 0:
-            return False
         elif type(position[0]) is not int or position[0] < 0:
+            return False
+        elif type(position[1]) is not int or position[1] < 0:
             return False
         else:
             return True
