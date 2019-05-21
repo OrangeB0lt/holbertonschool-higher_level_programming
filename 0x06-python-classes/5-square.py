@@ -47,14 +47,14 @@ class Square:
         else:
             self.__size = value
 
-        def my_print(self):
-            """
-            prints to the stdout square with # or empty line if 0
-            """
-            print("\n".join(["".join(["#" for a in range(slef.__size)])
-                             for b in range(self.size)]))
+    def my_print(self):
+        """
+        prints to the stdout square with # or empty line if 0
+        """
+        print("\n".join(["".join(["#" for a in range(slef.__size)])
+                         for b in range(self.size)]))
 
-        def area(self):
+    def area(self):
         """
         Returns area of the square instance
         """
