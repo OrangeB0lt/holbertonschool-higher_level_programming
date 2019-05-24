@@ -1,0 +1,39 @@
+"0-add_integer" module
+-----------------------
+import module:
+    >>> add_integer =  __import__('0-add_integer').add_integer
+
+Two Floats:
+    >>> add_integer(1.3, 5.7)
+    6
+
+Two Integers:
+    >>> add_integer(1, 2)
+    3
+
+Float and Integer:
+    >>> add_integer(4.5, 4)
+    8
+
+Other type and Integer:
+    >>> add_integer("6", 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Array and Integer:
+    >>> add_integer([4, "shoe"], 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Array:
+    >>> add_integer([4, "shoe"], ["hat", "4"])
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+One int only:
+    >>> add_integer(6)
+    104
+        
