@@ -1,0 +1,25 @@
+"4-print_square" module
+------------------------
+
+import module:
+    >>> print_square = __import__("4-print_square").print_square
+
+Best Case:
+    >>> print_square(5)
+    #####
+    #####
+    #####
+    #####
+    #####
+
+Square negative:
+    >>> print_square(-5)
+    Traceback (most recent call last:
+        ...
+    ValueError: size must be >= 0
+
+Square not an integer:
+    >>> print_square("Gotta go fyaaaaast")
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
