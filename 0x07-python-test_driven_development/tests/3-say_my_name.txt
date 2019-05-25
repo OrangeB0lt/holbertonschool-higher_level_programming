@@ -1,0 +1,35 @@
+"3-say_my_name" module
+-----------------------
+import module:
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Best case:
+    >>> say_my_name("Walter", "White")
+    Walter White
+
+Only first:
+    >>> say_my_name("Walter")
+    Walter 
+
+Last only, NULL first:
+    >>> say_my_name(, "White")
+        ...
+    SyntaxError: invalid syntax
+
+Last name not string:
+    >>> say_my_name("Walter", 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+First name not string:
+    >>> say_my_name(22, "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Both inputs integers:
+    >>> say_my_name(22, 435)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
