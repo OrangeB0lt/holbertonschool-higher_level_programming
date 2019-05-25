@@ -1,0 +1,36 @@
+"2-matrix_divided" module
+--------------------------
+import module:
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Best Case:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+Throwing in a string:
+    >>> matrix_divided([[1, 2, 3], [4, 5, "sting"]], 2)
+    Traceback (most recent call last):
+          ...
+    TypeError: matix must be a matrix (list of lists) of integers/floats
+
+Number not in a matrix:
+    >>> matrix_divided([[1, 2, 3], [4, 5, "sting"]], 2)
+    Traceback ( most recent call last):
+        ...
+    TypeError: matix must be a matrix (list of lists) of integers/floats
+
+Divide by zero:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+Divider as ascii:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+Divider is float:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3.5)
+    [[0.29, 0.57, 0.86], [1.14, 1.43, 1.71]]
