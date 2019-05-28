@@ -17,6 +17,15 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+    
+    def __str__(self):
+        if self.width == 0 or self.height == 0:
+            return ("")
+        width = '#' * self.width
+        rectangle = width
+        for idx in range(self.height - 1):
+            rectangle += "\n" + width
+        return (rectangle)
 
     @property
     def width(self):
@@ -53,12 +62,3 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.width + self.height)
-    
-    def __str__(self):
-        if self.width == 0 or self.height == 0:
-            return ("")
-        width = '#' * self.width
-        rectangle = width
-        for idx in range(self.height - 1):
-            rectangle += "\n" + width
-        return (rectangle)
