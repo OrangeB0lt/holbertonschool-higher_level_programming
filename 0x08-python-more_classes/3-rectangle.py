@@ -8,6 +8,8 @@ class Rectangle:
     Class attributes
     height
     width
+    area
+    perimeter
     both have setter and property defs
     """
     
@@ -39,3 +41,24 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """<WIDTH> * <HEIGHT> = <AREA>
+        """
+        return self.width * self.height
+    
+    def perimeter(self):
+        """2 * (<WIDTH> + <HEIGHT>)
+        """
+        if self.width == 0 or self.height == 0:
+            return 0
+        return 2 * (self.width + self.height)
+    
+    def __str__(self):
+        if self.width == 0 or self.height == 0:
+            return ("")
+        width = '#' * self.width
+        rectangle = width
+        for idx in range(self.height - 1):
+            rectangle += "\n" + width
+        return (rectangle)
