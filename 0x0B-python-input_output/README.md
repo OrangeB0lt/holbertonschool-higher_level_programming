@@ -81,15 +81,3 @@ Prototype: `def pascal_triangle(n):`
 
 **[100-append_after.py](100-append_after.py)** - Write a function that inserts a line of text to a file, after each line containing a specific string   
 Prototype: `def append_after(filename="", search_string="", new_string=""):`   
-
-**[101-stats.py](101-stats.py)** - Write a script that reads `stdin` line by line and computes metrics:    
-   * Input Format: `<IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>`   
-   * Each 10 lines and after every  keyboard interruption, print these statistics:   
-      * Total file size `File size: <total size>` which is the sum of all previous file sizes   
-      * Number of lines by status code:   
-         * possible status code: `200`, `301`, `400`, `401`, `403`, `404`, `405` and `500`    
-	 * format: `<status code>: <number>`    
-	 * if a status code doesn’t appear, don’t print anything for that code    
-
-**[read_write_heap.py](read_write_heap.py)** - Write a script that finds a string in the heap of a running process, and replaces it   
-Usage: `read_write_heap.py pid search_string replace_string`   
