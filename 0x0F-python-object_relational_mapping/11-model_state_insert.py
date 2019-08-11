@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' displays states in a CL query '''
+''' adds a new state in a CL query '''
 
 
 if __name__ == "__main__":
@@ -11,3 +11,7 @@ if __name__ == "__main__":
         .format(argv[1], argv[2], argv[3]))
     Sess = sessionmaker(bind=engine)
     sess = Sess()
+    louisiana = State(name='Louisiana')
+    sess.add(louisiana)
+    sess.commit()
+    print(louisiana.id)
