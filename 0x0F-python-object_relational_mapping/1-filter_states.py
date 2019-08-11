@@ -2,19 +2,21 @@
 ''' lists states from DB hbtn_0e_0_usa that starts with letter N '''
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
     from sys import argv
+    userN = argv[1]
+    password = argv[2]
+    dataBase = argv[3]
+
     import MySQLdb
-    dataBase = MySQLdb.connect(user=argv[1],
-                                passwd=argv[2],
-                                dataBase=argv[3])
-    
-    current = dataBase.cursor()
-    current.execute("SELECT * from states WHERE name LIKE
-                    'N%' COLLATE latin1_general_cd ORDER BY states.id")
-    state_list = current.fetchall()
-    for state in state_list:
-        print(state)
-    current.close()
-    dataBase.close()
+    db = MySQLdb.connect(host='localhost', port=3306, user=userN,
+        passwd=password, db=dataBase)
+    curs = db.cursor()
+    curs.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    for row in curs.fetchall():
+        if row[1][0] == 'N':
+            print(row)
+
+    curs.close()
+    db.close()
     
