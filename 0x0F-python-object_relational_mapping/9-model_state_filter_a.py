@@ -15,5 +15,3 @@ if __name__ == "__main__":
             State.name.contains('a')).order_by(State.id).all():
         print("{}:{}".format(state.id, state.name))
     sess.close()
-
-    
