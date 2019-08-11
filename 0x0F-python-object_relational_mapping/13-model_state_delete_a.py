@@ -14,6 +14,5 @@ if __name__ == "__main__":
     for state in sess.query(State).filter(
             State.name.contains('a')).all():
         sess.delete(state)
-        sess.commit()
-        sess.close()
-        
+    sess.commit()
+    sess.close()
