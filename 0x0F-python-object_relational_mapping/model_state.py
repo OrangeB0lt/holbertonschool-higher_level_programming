@@ -7,10 +7,10 @@ model_state.py: contains class definition of a State
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-BaSe = declarative_base()
+Base = declarative_base()
 
 
-class State(BaSe):
+class State(Base):
     """
     maps to 'states' table in hbtn_0e_6_usa' database
     """
