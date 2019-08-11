@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' lists cities ''' of names state
+''' lists cities of names state '''
 
 
 if __name__ == "__main__":
