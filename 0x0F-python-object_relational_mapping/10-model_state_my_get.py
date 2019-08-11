@@ -11,7 +11,7 @@ if __name__ == "__main__":
         .format(argv[1], argv[2], argv[3]))
     Sess = sessionmaker(bind=engine)
     sess = Sess()
-    for instance in session.query(State).order_by(State.id):
+    for instance in sess.query(State).order_by(State.id):
         if instance.name == state_name:
             print(instance.id)
             exit()
