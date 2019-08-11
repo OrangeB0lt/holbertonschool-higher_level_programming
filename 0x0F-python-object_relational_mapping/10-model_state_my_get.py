@@ -11,8 +11,10 @@ if __name__ == "__main__":
         .format(argv[1], argv[2], argv[3]))
     Sess = sessionmaker(bind=engine)
     sess = Sess()
-    for instance in sess.query(State).order_by(State.id):
-        if instance.name == state_name:
-            print(instance.id)
-            exit()
-    print('Not found')
+    state = sess.query(State).filter(
+            State.name == argv[4]).first()
+    if state:
+        print(state.id)
+    else:
+        print("Not found")
+    session.close()
