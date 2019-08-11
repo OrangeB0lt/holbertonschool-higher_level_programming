@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 model_state.py: contains class definition of a State
 """
@@ -14,7 +15,7 @@ class State(BaSe):
     maps to 'states' table in hbtn_0e_6_usa' database
     """
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=Truem nullable=False)
     name = Column(String(128), nullable=False)
 
     def __repr__(self):
