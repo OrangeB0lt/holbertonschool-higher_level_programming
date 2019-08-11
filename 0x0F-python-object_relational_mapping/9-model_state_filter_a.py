@@ -11,7 +11,7 @@ if __name__ == "__main__":
         .format(argv[1], argv[2], argv[3]))
     Sess = sessionmaker(bind=engine)
     sess = Sess()
-    for state in sess.query(State).filter(
-            State.name.contains('a')).order_by(State.id).all():
-        print("{}:{}".format(state.id, state.name))
+    for instance in sess.query(State).order_by(State.id):
+        if 'a' in instance.name:
+            print('{}: {}'.format(instance.id, instance.name))
     sess.close()
