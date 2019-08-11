@@ -2,7 +2,7 @@
 ''' Lists states from database hbtn_0e_0_usa'''
 
 
-if __name__ == "__manin__":
+if __name__ == "__main__":
     from sys import argv
     import MySQLdb
     db = MySQLdb.connect(user=argv[1],
@@ -15,4 +15,3 @@ if __name__ == "__manin__":
         print(state)
     current.close()
     db.close()
-    
