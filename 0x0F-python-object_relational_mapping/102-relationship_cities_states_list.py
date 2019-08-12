@@ -15,7 +15,6 @@ if __name__ == "__main__":
     Sess = sessionmaker(bind=engine)
     sess = Sess()
 
-    for city in session.query(City).order_by(City.id).all():
+    for city in sess.query(City).order_by(City.id).all():
         print("{}: {} -> {}".format(city.id, city.name, city.state.name))
     sess.close()
-    
