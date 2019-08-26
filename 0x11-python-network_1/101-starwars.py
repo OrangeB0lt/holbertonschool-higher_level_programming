@@ -5,7 +5,7 @@ import sys
 
 
 def request_to_star_wars(the_url, payload):
-    """makes a request to input URL with q as a parameter"""
+
     reqst = requests.get(the_url, params=payload).json()
     name_list = []
     count = reqst.get('count')
